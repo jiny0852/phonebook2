@@ -110,14 +110,14 @@ public class PhonebookDao {
 				
 				PersonVo personVo = new PersonVo(id, name, hp, company);
 				
-				System.out.println(personVo);
+				//System.out.println(personVo);
 				personList.add(personVo);
 				
 				count++;
 				
 			}
 			
-			System.out.println(count + "건 조회 되었습니다.");
+			System.out.println( (count+1) + "건 조회 되었습니다.");
 			
 		} catch (SQLException e) {
 			System.out.println("error:" + e);
