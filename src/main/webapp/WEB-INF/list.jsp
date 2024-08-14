@@ -51,7 +51,10 @@
 			</tr>
 			
 			<tr>
-				<td name="action" valus="editform">[수정폼으로 이동]</td>
+				<td>
+					<a href="http://localhost:8080/pb2/pbc?action=editform&no=<%=personList.get(i).getPersonId()%>">
+					[수정폼으로 이동]</a>
+				</td>
 				<td>[삭제]</td>
 			</tr>
 
