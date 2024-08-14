@@ -32,10 +32,10 @@
 	<p>등록된 전화번호 리스트 입니다</p>
 
 
-	<% for (int i = 0 ; i < personList.size() ; i++ ) {%>
+	<% for ( int i = 0 ; i < personList.size() ; i++ ) {%>
 	<table border="1">
 
-		<tbody>
+		<tbody name="no" value="<%=personList.get(i).getPersonId()%>">
 
 			<tr>
 				<td>이름(name)</td>
@@ -51,7 +51,7 @@
 			</tr>
 			
 			<tr>
-				<td>[수정폼으로 이동]</td>
+				<td name="action" valus="editform">[수정폼으로 이동]</td>
 				<td>[삭제]</td>
 			</tr>
 

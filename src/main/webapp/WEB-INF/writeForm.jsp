@@ -28,18 +28,20 @@
 		
 			<div>
 				<label for="txt-name">이름(name): </label> 
-				<input id="txt-name" type="text" name="" value="" placeholder="이름">
+				<input id="txt-name" type="text" name="name" value="" placeholder="이름">
 			</div>
 			
 			<div>
 				<label for="txt-hp">핸드폰(hp): </label> 
-				<input id="txt-hp" type="text" name="" value="" placeholder="핸드폰">
+				<input id="txt-hp" type="text" name="hp" value="" placeholder="핸드폰">
 			</div>
 			
 			<div>
 				<label for="txt-company">회사(company): </label> 
-				<input id="txt-company" type="text" name="" value="" placeholder="회사">
+				<input id="txt-company" type="text" name="company" value="" placeholder="회사">
 			</div>
+			
+			<input type="hidden" name="action" value="insert" placeholder="업무">
 	
 			<br>
 			<button type="submit">저장(전송)</button>
