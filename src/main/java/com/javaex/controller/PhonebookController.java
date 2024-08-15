@@ -167,6 +167,23 @@ public class PhonebookController extends HttpServlet {
 			
 			
 			
+		} else if ( "delete".equals(action) ) {
+			
+			System.out.println("수정");
+			
+			//파라미터 꺼내기
+			int no = Integer.parseInt(request.getParameter("no"));
+			
+			//Dao를 메모리에 올린다
+			PhonebookDao phonebookDao = new PhonebookDao();
+			
+			//phonebookDao를 통해서 삭제delete를 시킨다
+			phonebookDao.deletePerson(no);
+			
+			//리다이렉트 시킨다
+			response.sendRedirect("/pb2/pbc?action=list");
+			
+			
 		}
 		
 		

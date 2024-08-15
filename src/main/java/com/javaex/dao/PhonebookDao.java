@@ -72,6 +72,44 @@ public class PhonebookDao {
 	//////////////////////////////////////////////////
 	
 	
+	//사람 정보 삭제
+	public int deletePerson(int id) {
+
+		int count = 0; 
+		
+		this.getConnection();
+		
+		try {
+			// 3. SQL문 준비 / 바인딩 / 실행
+
+			// - sql문 준비
+			String query = "";
+			query += " delete from person ";
+			query += " where person_id = ? ";
+
+			// - 바인딩
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, id);
+
+			// - 실행
+			count = pstmt.executeUpdate();
+
+
+
+			// 4.결과처리
+			System.out.println(count + "건 삭제 되었습니다.");
+
+			
+		}  catch (SQLException e) {
+			System.out.println("error:" + e);
+		}
+
+		this.close();
+
+		return count;
+	}
+	
+	
 	
 	// 사람 정보 수정
 	public int updatePerson(PersonVo personVo) {

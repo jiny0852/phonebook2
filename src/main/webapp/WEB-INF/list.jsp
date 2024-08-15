@@ -3,7 +3,6 @@
 	
 <%@ page import="java.util.List" %>
 <%@ page import="com.javaex.vo.PersonVo" %>
-<%@ page import="com.javaex.dao.PhonebookDao" %>
 
 <% 
 	List<PersonVo> personList = (List<PersonVo>)request.getAttribute("pList");
@@ -51,11 +50,15 @@
 			</tr>
 			
 			<tr>
+				<!-- 
 				<td>
 					<a href="http://localhost:8080/pb2/pbc?action=editform&no=<%=personList.get(i).getPersonId()%>">
 					[수정폼으로 이동]</a>
 				</td>
 				<td>[삭제]</td>
+				-->
+				<td><a href="http://localhost:8080/pb2/pbc?action=editform&no=<%=personList.get(i).getPersonId()%>">[수정폼으로 이동]<a></td>
+				<td><a href="http://localhost:8080/pb2/pbc?action=delete&no=<%=personList.get(i).getPersonId()%>">[삭제]</a></td>
 			</tr>
 
 		</tbody>
